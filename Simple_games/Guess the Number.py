@@ -12,9 +12,9 @@ print("            ")
 print("|+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++|")
 r=rd.randint(a,b)
 kp=0
-At=5
+tr=0
 while kp!=r:
-    print("Number of Attempts left= ",At)
+    print("Number of tries = ",tr)
     c=rd.randint(a,b)
     if c>r:
         print("HINT:- Number is smaller then ",c)
@@ -28,8 +28,8 @@ while kp!=r:
     if r<kp<b:
         print("INCORRECT!! It is smaller then",kp)
         b=kp
-    At=At-1
-    if At==0:
+    tr=tr+1
+    if tr==0:
         print("Oops You have LOST the game (T^T) Try Again!")   
     if kp==r:
         print("Your Guess is correct . You have WON the game YAY(⁠≧⁠▽⁠≦⁠)!!")   
