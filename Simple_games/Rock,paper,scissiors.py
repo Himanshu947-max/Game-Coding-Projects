@@ -5,18 +5,18 @@ text="Simple game as you are already familiar with this.I am your Opponent,You h
 for i in text.split():
     print(i,end=" ",flush=True)
     time.sleep(0.10)
-gu=input("ROOCK ! ..,PAAPER! ,... SCISSIOR!!  :")
+gu=input("ROCK ! ..,PAPER! ,... SCISSIOR!!: ")
 gue=gu.capitalize()
 ch=["Rock","Paper","Scissior"]
 while gue not in ch:
     print("Please give your guess corrcetly from Rock,Paper and Scissior")
-    gu=input("ROOCK ! ..,PAAPER! ,... SCISSIOR!!  :")
+    gu=input("ROOCK ! ..,PAAPER! ,... SCISSIOR!!: ")
     gue=gu.capitalize()
 
 bot=0
 You=0
-chb=random.choice(ch)
 while bot!=5 or You!=5:
+    chb=random.choice(ch)
     if chb=="Scissior" and gue=="Rock":
         You=You+1
         print("Your Opponent replies with ",chb)
@@ -63,7 +63,9 @@ while bot!=5 or You!=5:
         print("GGs!! You WON the game!! ")
     if bot==5:
         print("GGs!! You LOST the game!! ")
-    ag=input("Another Round , ROOCK ! ..,PAAPER! ,... SCISSIOR!!  :")
+        break
+    ag=input("Another Round , ROCK ! ..,PAPER! ,... SCISSIOR!!: ")
     age=ag.capitalize()
-    if age not in ch:
+    ch=["Rock","Paper","Scissior"]
+    while age not in ch:
         print("Please give your guess corrcetly from Rock,Paper and Scissior")
